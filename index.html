@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  
+  <header>
+    <div class="logo-container">
+      <span class="youtube-logo">YouTube</span>
+    </div>
+    <div class="search-container">
+      <input type="text" id="search-input" placeholder="Search" />
+      <button id="search-btn">🔍</button>
+    </div>
+    <div class="user-actions">
+      <button class="icon">🔔</button>
+      <button class="icon">📷</button>
+      <button class="user-avatar">👤</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <nav class="sidebar">
+      <ul>
+        <li class="sidebar-item active"><button>🏠 홈</button></li>
+        <li class="sidebar-item"><button>🎬 Shorts</button></li>
+        <li class="sidebar-item"><button>📺 구독</button></li>
+        <li class="sidebar-item"><button>👤 내 페이지</button></li>
+        <li class="sidebar-item"><button>🕒 시청 기록</button></li>
+        <li class="sidebar-item"><button>📂 재생목록</button></li>
+        <li class="sidebar-item"><button>🎥 내 동영상</button></li>
+        <li class="sidebar-item"><button>⏰ 나중에 볼 동영상</button></li>
+        <li class="sidebar-item"><button>👍 좋아요 표시한 동영상</button></li>
+      </ul>
+    </nav>
+    
+    <main class="content">
+      
+      <section id="video-list" aria-label="동영상 목록">
+        
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

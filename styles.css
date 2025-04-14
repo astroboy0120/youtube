@@ -1,0 +1,208 @@
+/* 기본 스타일 */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 16px;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.youtube-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: red;
+}
+
+.search-container {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 16px;
+}
+
+.search-container input {
+  flex: 1;
+  padding: 8px;
+  font-size: 1rem;
+}
+
+.search-button {
+  padding: 8px 12px;
+  background-color: #eee;
+  border: none;
+  cursor: pointer;
+}
+
+.user-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.icon,
+.user-avatar {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* 메인 컨테이너 */
+.container {
+  display: flex;
+}
+
+/* 사이드바 */
+.sidebar {
+  width: 220px;
+  padding: 16px 0;
+  background-color: white;
+  border-right: 1px solid #ddd;
+  height: 100vh;
+  position: sticky;
+  top: 56px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  padding: 8px 16px;
+}
+
+.sidebar-item button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: none;
+  border: none;
+  width: 100%;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.sidebar-item.active {
+  background-color: #f0f0f0;
+}
+
+/* 콘텐츠 영역 */
+.content {
+  flex: 1;
+  padding: 0; /* 내부 여백 제거 */
+}
+
+/* 동영상 리스트 */
+#video-list {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)) !important;
+  gap: 24px !important;
+  padding: 24px !important;
+  box-sizing: border-box;
+}
+
+/* 비디오 카드 */
+.video-card {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  background-color: #ccc;
+}
+
+.video-info {
+  display: flex;
+  padding: 12px;
+}
+
+.channel-avatar {
+  width: 36px;
+  height: 36px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  margin-right: 12px;
+}
+
+.video-details h3 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.video-details p {
+  margin: 2px 0;
+  font-size: 0.85rem;
+  color: #666;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+
+  .search-container {
+    max-width: 300px;
+  }
+
+  .video-card .thumbnail {
+    height: 140px;
+  }
+
+  #video-list {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)) !important;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .search-container {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .user-actions {
+    margin-top: 8px;
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  #video-list {
+    grid-template-columns: 1fr !important;
+  }
+}
